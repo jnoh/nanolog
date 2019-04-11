@@ -11,6 +11,10 @@ const app = express();
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
+app.get('/actor', function(request, response) {
+  response.sendFile(__dirname + '/public/actor.json');
+});
+
 app.get('/.well-known/webfinger', function(request, response) {
   response.sendFile(__dirname + '/public/webfinger.json');
 });
