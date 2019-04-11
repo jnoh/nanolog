@@ -1,0 +1,11 @@
+{
+	"subject": "acct:jeff@jnoh.net",
+
+	"links": [
+		{
+			"rel": "self",
+			"type": "application/activity+json",
+			"href": "https://jnoh.net/actor"
+		}
+	]
+}

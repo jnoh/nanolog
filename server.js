@@ -11,10 +11,15 @@ const app = express();
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
+app.get('/.well-known/webfinger', function(request, response) {
+  response.sendFile(__dirname + '/public/webfinger.json');
+});
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
+
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
