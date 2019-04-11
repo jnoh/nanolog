@@ -1,11 +1,11 @@
 {
-	"subject": "acct:jeff@jnoh.net",
+	"subject": "acct:jnoh@tinyap.glitch.me",
 
 	"links": [
 		{
 			"rel": "self",
 			"type": "application/activity+json",
-			"href": "https://jnoh.net/actor"
+			"href": "https://tinyap.glitch.me/actor"
 		}
 	]
 }
