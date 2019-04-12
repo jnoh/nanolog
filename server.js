@@ -5,6 +5,7 @@
 const express = require('express');
 const app = express();
 const db = require('./data/db');
+const Note = require('./lib/note');
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -16,8 +17,11 @@ app.get('/create-hello-world', function(request, response) {
   response.sendFile(__dirname + '/public/create-hello-world.json');
 });
 
-app.get('note/:note', function(request, response) {
-  request.params["note"];
+app.get('/note/:note', function(request, response) {
+  (async function() {
+    const note = await Note.find(request.params["note"]);
+    response.send(note.asObject());
+  })();
 });
 
 app.get('/jnoh', function(request, response) {
