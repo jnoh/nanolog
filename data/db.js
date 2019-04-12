@@ -15,7 +15,7 @@ db.serialize(function(){
   };
   
   console.log('Database "Notes" ready to go!');
-  db.each('SELECT * from Notes', function(err, row) {
+  db.each('SELECT rowid, * from Notes', function(err, row) {
     if (row) console.log('record:', row);
   });
 });
