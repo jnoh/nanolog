@@ -18,7 +18,7 @@ const options = {
   }
 };
 
-const req = https.request('https://mastodon.social/inbox', options, res => {
+const req = https.request('https://mastodon.social/inbox', options, (res) => {
   let data = '';
   res.setEncoding('utf8');
   res.on('data', (chunk) => {
