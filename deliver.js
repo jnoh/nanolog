@@ -15,7 +15,6 @@ const options = {
   method: 'POST',
   headers: {
     'Host': 'mastodon.social',
-    'Content-Type': 'application/ld+json',
     'Date': date,
     'Signature': signature
   }
