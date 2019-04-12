@@ -9,6 +9,8 @@ const str           = `(request-target): post /inbox\nhost: mastodon.social\ndat
 const signedStr     = encrypt(str, privateKey);
 const signature     = `keyId="https://tinyap.glitch.me/actor",headers="(request-target) host date",signature="${signedStr}"`;
 
+console.log(privateKey);
+
 const options = {
   method: 'POST',
   headers: {
