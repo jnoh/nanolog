@@ -28,7 +28,7 @@ const req = https.request(url, options, res => {
   });
   res.on('end', () => console.log(data));
 });
-req.on('error', (e) => throw e);
+req.on('error', (e) => console.error(e));
 req.write(body);
 req.end();
 
