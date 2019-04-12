@@ -10,8 +10,8 @@ const exists  = fs.existsSync(dbFile);
 // if ./.data/sqlite.db does not exist, create it, otherwise print records to console
 db.serialize(function(){
   if (!exists) {
-    db.run('CREATE TABLE Notes (id TEXT)');
-    console.log('New table Dreams created!');
+    db.run('CREATE TABLE Notes (createdAt TEXT)');
+    console.log('New table Notes created!');
     
     // insert default dreams
     db.serialize(function() {
