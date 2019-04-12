@@ -2,12 +2,12 @@ const https  = require('https');
 const crypto = require('crypto');
 const fs     = require('fs');
 
-const body          = fs.readFileSync('./public/create-hello-world.json');
-const date          = (new Date()).toUTCString();
-const privateKey    = process.env.PRIVATE;
-const str           = `(request-target): post /inbox\nhost: mastodon.social\ndate: ${date}`;
-const signedStr     = sign(str, privateKey);
-const signature     = `keyId="https://tinyap.glitch.me/actor#main-key",headers="(request-target) host date",signature="${signedStr}"`;
+const body        = fs.readFileSync('./public/create-hello-world.json');
+const date        = (new Date()).toUTCString();
+const privateKey  = process.env.PRIVATE;
+const str         = `(request-target): post /inbox\nhost: mastodon.social\ndate: ${date}`;
+const signedStr   = sign(str, privateKey);
+const signature   = `keyId="https://tinyap.glitch.me/actor#main-key",headers="(request-target) host date",signature="${signedStr}"`;
 
 const options = {
   method: 'POST',
