@@ -6,10 +6,8 @@ const body          = fs.readFileSync('./public/create-hello-world.json');
 const date          = (new Date()).toUTCString();
 const privateKey    = process.env.PRIVATE;
 const str           = `(request-target): post /inbox\nhost: mastodon.social\ndate: ${date}`;
-const signedStr     = encrypt(str, privateKey);
+const signedStr     = sign(str, privateKey);
 const signature     = `keyId="https://tinyap.glitch.me/actor#main-key",headers="(request-target) host date",signature="${signedStr}"`;
-
-console.log(privateKey);
 
 const options = {
   method: 'POST',
@@ -32,8 +30,9 @@ req.on('error', (e) => console.error(e));
 req.write(body);
 req.end();
 
-function encrypt(str, private) {
-  var buffer = Buffer.from(str);
-  var encrypted = crypto.privateEncrypt(private, buffer);
-  return encrypted.toString("base64");
+function sign(str, privateKey) {
+  const sign = crypto.createSign('SHA256');
+  sign.write(str);
+  sign.end();
+  return sign.sign(privateKey, 'base64');
 }
