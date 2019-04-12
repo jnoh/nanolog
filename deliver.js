@@ -20,7 +20,6 @@ const options = {
 
 console.log(options);
 
-/*
 const req = https.request(url, options, res => {
   let data = '';
   res.setEncoding('utf8');
@@ -32,7 +31,6 @@ const req = https.request(url, options, res => {
 req.on('error', (e) => throw e);
 req.write(body);
 req.end();
-*/
 
 function encrypt(str, private) {
   var buffer = Buffer.from(str);
