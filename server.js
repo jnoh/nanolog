@@ -13,10 +13,6 @@ const Note = require('./lib/note');
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-app.get('/create-hello-world', function(request, response) {
-  response.sendFile(__dirname + '/public/create-hello-world.json');
-});
-
 app.get('/note/:note', function(request, response) {
   (async function() {
     const note = await Note.find(request.params["note"]);
