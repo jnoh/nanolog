@@ -11,6 +11,10 @@ const app = express();
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
+app.get('/create-hello-world', function(request, response) {
+  response.sendFile(__dirname + '/public/create-hello-world.json');
+});
+
 app.get('/actor', function(request, response) {
   response.sendFile(__dirname + '/public/actor.json');
 });
