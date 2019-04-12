@@ -16,6 +16,10 @@ app.get('/create-hello-world', function(request, response) {
   response.sendFile(__dirname + '/public/create-hello-world.json');
 });
 
+app.get('note/:note', function(request, response) {
+  request.params["note"];
+});
+
 app.get('/jnoh', function(request, response) {
   response.sendFile(__dirname + '/public/actor.json');
 });
