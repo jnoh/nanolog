@@ -7,7 +7,7 @@ const date          = (new Date()).toUTCString();
 const privateKey    = process.env.PRIVATE;
 const str           = `(request-target): post /inbox\nhost: mastodon.social\ndate: ${date}`;
 const signedStr     = encrypt(str, privateKey);
-const signature     = `keyId="https://tinyap.glitch.me/actor",headers="(request-target) host date",signature="${signedStr}"`;
+const signature     = `keyId="https://tinyap.glitch.me/actor#main-key",headers="(request-target) host date",signature="${signedStr}"`;
 
 console.log(privateKey);
 
