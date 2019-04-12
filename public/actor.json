@@ -3,15 +3,13 @@
 		"https://www.w3.org/ns/activitystreams",
 		"https://w3id.org/security/v1"
 	],
-
-	"id": "https://tinyap.glitch.me/actor",
+	"id": "https://tinyap.glitch.me/jnoh",
 	"type": "Person",
 	"preferredUsername": "jnoh",
 	"inbox": "https://tinyap.glitch.me/inbox",
-
 	"publicKey": {
-		"id": "https://tinyap.glitch.me/actor#main-key",
-		"owner": "https://tinyap.glitch.me/actor",
+		"id": "https://tinyap.glitch.me/jnoh#main-key",
+		"owner": "https://tinyap.glitch.me/jnoh",
 		"publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr61XM/EAPax4B/v7rEsL\nugGoxXwqd378fTD+QE4GdMjYnzKKq8+ms8PxColRcAv74ehygarJ68aZ5y2+PW6/\ndRLCsKhvuJhY8KnMKOaaSkvXfHfAe9BixNWgjquMxp0WoG0EwkpBtx8929uXznSI\n3nhwnH0ljkKGeb/H+XvsiTC6KGwaK2VPgnVYZXD/kJPFvajGsgE4Dn1aY58C6W41\n7WF/3cz3Am4Lim4hQ/jJWfToQEVjbcziWwo275BZ2PeOA5lMqSxdFwtAAtxQa3Yy\n2Z1LWt4kTfxzWHmuNDNVxg1NFUu/57Yb5+K+g8ri6TT5Obh8doHiAy8OoXso1djA\ncwIDAQAB\n-----END PUBLIC KEY-----"
 	}
 }
