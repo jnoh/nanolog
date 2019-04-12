@@ -20,7 +20,7 @@ app.get('/create-hello-world', function(request, response) {
 app.get('/note/:note', function(request, response) {
   (async function() {
     const note = await Note.find(request.params["note"]);
-    response.send(note.asObject());
+    response.send(note.apObject());
   })();
 });
 
