@@ -1,0 +1,17 @@
+{
+	"@context": "https://www.w3.org/ns/activitystreams",
+
+	"id": "https://tinyap.glitch.me/create-hello-world",
+	"type": "Create",
+	"actor": "https://tinyap.glitch.me/actor",
+
+	"object": {
+		"id": "https://tinyap.glitch.me/hello-world",
+		"type": "Note",
+		"published": "2019-04-11T17:17:11Z",
+		"attributedTo": "https://tinyap.glitch.me/actor",
+		"inReplyTo": "https://mastodon.social/@Gargron/100254678717223630",
+		"content": "<p>Hello world</p>",
+		"to": "https://www.w3.org/ns/activitystreams#Public"
+	}
+}
