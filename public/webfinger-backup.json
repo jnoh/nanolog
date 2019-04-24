@@ -1,0 +1,11 @@
+{
+	"subject": "acct:jnoh@tinyap.glitch.me",
+
+	"links": [
+		{
+			"rel": "self",
+			"type": "application/activity+json",
+			"href": "https://tinyap.glitch.me/jnoh"
+		}
+	]
+}

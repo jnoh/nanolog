@@ -1,11 +1,37 @@
-{
-	"subject": "acct:jnoh@tinyap.glitch.me",
 
-	"links": [
-		{
-			"rel": "self",
-			"type": "application/activity+json",
-			"href": "https://tinyap.glitch.me/jnoh"
-		}
-	]
+{
+  "subject": "acct:jnoh@tinyap.glitch.me",
+  "aliases": [
+    "https://mastodon.social/@jnoh",
+    "https://mastodon.social/users/jnoh"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@jnoh"
+    },
+    {
+      "rel": "http://schemas.google.com/g/2010#updates-from",
+      "type": "application/atom+xml",
+      "href": "https://mastodon.social/users/jnoh.atom"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/jnoh"
+    },
+    {
+      "rel": "salmon",
+      "href": "https://mastodon.social/api/salmon/790542"
+    },
+    {
+      "rel": "magic-public-key",
+      "href": "data:application/magic-public-key,RSA.1MZr1dp0KXQGgKjuX0W7n4jAxotUmkzO4E_WRsS0jDxpBY_-QJbzA8_X52noo8IDle8ekpxVxnONN3HZacw7r80vP1N6aDzfqddtl8cEzcoLyUZg4MyXdZzjiuKlwXamqFMkgqHi5xnTfnGiEF-dsWketXO5VeFFCsg96PomQ98x9okA8wErojqarIvSOZlZsf55OZX-3f7ID70tIxkjwxYP55SyUI-zlq6W3p4Un6RGwfpVv6Nwu1zcLhv7eyoiBN45D0IBPpbehngcbYtbcoWVa03ZjOJu7o7h3_wbsFCz5le3HYsaUeW4cRxqVqfvH3Y-Tp38LrYJdJd0Gl9ysw==.AQAB"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://mastodon.social/authorize_interaction?uri={uri}"
+    }
+  ]
 }

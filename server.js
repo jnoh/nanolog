@@ -25,6 +25,7 @@ app.get('/jnoh', function(request, response) {
 });
 
 app.get('/.well-known/webfinger', function(request, response) {
+  console.log(request);
   response.sendFile(__dirname + '/public/webfinger.json');
 });
 
