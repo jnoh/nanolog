@@ -1,40 +1,40 @@
 // client-side js
 // run by the browser each time your view template is loaded
 
-// our default array of dreams
-const dreams = [
+// our default array of notes
+const notes = [
   'Find and count some sheep',
   'Climb a really tall mountain',
   'Wash the dishes'
 ];
 
 // define variables that reference elements on our page
-const dreamsList = document.getElementById('dreams');
-const dreamsForm = document.forms[0];
-const dreamInput = dreamsForm.elements['dream'];
+const notesList = document.getElementById('notes');
+const notesForm = document.forms[0];
+const noteInput = notesForm.elements['note'];
 
-// a helper function that creates a list item for a given dream
-const appendNewDream = function(dream) {
+// a helper function that creates a list item for a given note
+const appendNewnote = function(note) {
   const newListItem = document.createElement('li');
-  newListItem.innerHTML = dream;
-  dreamsList.appendChild(newListItem);
+  newListItem.innerHTML = note;
+  notesList.appendChild(newListItem);
 }
 
-// iterate through every dream and add it to our page
-dreams.forEach( function(dream) {
-  appendNewDream(dream);
+// iterate through every note and add it to our page
+notes.forEach( function(note) {
+  appendNewnote(note);
 });
 
-// listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = function(event) {
+// listen for the form to be submitted and add a new note when it is
+notesForm.onsubmit = function(event) {
   // stop our form submission from refreshing the page
   event.preventDefault();
 
-  // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
+  // get note value and add it to the list
+  notes.push(noteInput.value);
+  appendNewnote(noteInput.value);
 
   // reset form 
-  dreamInput.value = '';
-  dreamInput.focus();
+  noteInput.value = '';
+  noteInput.focus();
 };

@@ -20,15 +20,6 @@ app.get('/note/:note', function(request, response) {
   })();
 });
 
-app.get('/jnoh', function(request, response) {
-  response.sendFile(__dirname + '/public/actor.json');
-});
-
-app.get('/.well-known/webfinger', function(request, response) {
-  console.log(request);
-  response.sendFile(__dirname + '/public/webfinger.json');
-});
-
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
