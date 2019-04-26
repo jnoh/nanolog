@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.get('/notes', function(request, response) {
   (async function() {
     const notes = await Note.all();
-    response.send(notes.toString());
+    response.send(JSON.stringify(notes));
   })();
 });
 

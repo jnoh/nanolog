@@ -2,11 +2,7 @@
 // run by the browser each time your view template is loaded
 
 // our default array of notes
-const notes = [
-  'Find and count some sheep',
-  'Climb a really tall mountain',
-  'Wash the dishes'
-];
+const notes = [];
 
 // define variables that reference elements on our page
 const notesList = document.getElementById('notes');
@@ -33,8 +29,13 @@ notesForm.onsubmit = function(event) {
   // get note value and add it to the list
   notes.push(noteInput.value);
   appendNewnote(noteInput.value);
+  createNewNote(noteInput.value);
 
   // reset form 
   noteInput.value = '';
   noteInput.focus();
+};
+
+function createNewNote(contents) {
+
 };
