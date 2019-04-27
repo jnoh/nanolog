@@ -25,7 +25,7 @@ app.get('/note/:note', function(request, response) {
 });
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/app/index.html');
+  response.sendFile(__dirname + '/src/index.html');
 });
 
 
