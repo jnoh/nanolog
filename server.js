@@ -4,11 +4,8 @@
 // init project
 const express = require('express');
 const app = express();
-const db = require('./data/db');
-const Note = require('./lib/note');
-
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+const db = require('./src/data/db');
+const Note = require('./src/lib/note');
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
@@ -27,13 +24,11 @@ app.get('/note/:note', function(request, response) {
   })();
 });
 
-// http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/app/index.html');
 });
 
 
-// listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
