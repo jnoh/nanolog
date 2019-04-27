@@ -7,14 +7,6 @@
 - sqlite browser
 - graphql
 
-- toolchain
-  - lint
-  - test
-  - transpile
-  - compile
-
-
-
 ## Setting up the toolchain
 - Dependency Management
 - Linting
